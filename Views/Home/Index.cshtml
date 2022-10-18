@@ -1,0 +1,104 @@
+﻿@model WebApplicationDatePicker.Models.ViewModel
+@{
+    ViewData["Title"] = "Test Date Picker";
+}
+
+<div class="text-center">
+    <h1>Test Date Picker</h1>
+    <div class="col-sm-6">
+        <form action="" method="post">
+            @*<p>
+            <label>12hr Date-Time:</label>
+        </p><div class="input-group date" id="id_0">
+            <input type="text" value="05/16/2018 12:31:00 AM" class="form-control" required="">
+            <span class="input-group-addon">
+                <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+            </span>
+        </div>
+        <p></p>
+        <p>
+            <label>24hr Date-Time:</label>
+        </p><div class="input-group date" id="id_1">
+            <input type="text" value="05/16/2018 11:31:00" class="form-control" required="">
+            <span class="input-group-addon">
+                <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+            </span>
+        </div>
+        <p></p>
+        <p>
+            <label>12hr Time:</label>
+        </p><div class="input-group date" id="id_2">
+            <input type="text" value="12:31:00 AM" class="form-control" required="">
+            <span class="input-group-addon">
+                <i class="glyphicon glyphicon-time fa fa-clock-o"></i>
+            </span>
+        </div>
+        <p></p>
+        <p>
+            <label>24hr Time:</label>
+        </p><div class="input-group date" id="id_3">
+            <input type="text" value="11:31:00" class="form-control" required="">
+            <span class="input-group-addon">
+                <i class="glyphicon glyphicon-time fa fa-clock-o"></i>
+            </span>
+        </div>
+        <p></p>*@
+            <p>
+                <label>Date only:</label>
+            </p><div class="input-group date" id="id_4">
+                @Html.TextBoxFor(model => model.CurrentDate, new { @class = "form-control" })
+                @*<input type="text" value="05/16/2018" class="form-control" required="">*@
+                <span class="input-group-addon">
+                    <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                </span>
+            </div>
+            <p></p>
+
+        </form>
+    </div>
+
+</div>
+
+
+
+<script>
+
+    $(document).ready(function () {
+        //$('#id_0').datetimepicker({
+        //    "allowInputToggle": true,
+        //    "showClose": true,
+        //    "showClear": true,
+        //    "showTodayButton": true,
+        //    "format": "MM/DD/YYYY hh:mm:ss A",
+        //});
+        //$('#id_1').datetimepicker({
+        //    "allowInputToggle": true,
+        //    "showClose": true,
+        //    "showClear": true,
+        //    "showTodayButton": true,
+        //    "format": "MM/DD/YYYY HH:mm:ss",
+        //});
+        //$('#id_2').datetimepicker({
+        //    "allowInputToggle": true,
+        //    "showClose": true,
+        //    "showClear": true,
+        //    "showTodayButton": true,
+        //    "format": "hh:mm:ss A",
+        //});
+        //$('#id_3').datetimepicker({
+        //    "allowInputToggle": true,
+        //    "showClose": true,
+        //    "showClear": true,
+        //    "showTodayButton": true,
+        //    "format": "HH:mm:ss",
+        //});
+
+        $('#id_4').datetimepicker({
+            "allowInputToggle": true,
+            "showClose": true,
+            "showClear": true,
+            "showTodayButton": true,
+            "format": "MM/DD/YYYY",
+        });
+    });
+</script>
